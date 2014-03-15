@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Quote information:</strong>
+  <%= @quote.quote_information %>
+</p>
+
+<p>
+  <strong>Quote amount:</strong>
+  <%= @quote.quote_amount %>
+</p>
+
+<p>
+  <strong>Quote due date:</strong>
+  <%= @quote.quote_due_date %>
+</p>
+
+<p>
+  <strong>Artwork due date:</strong>
+  <%= @quote.artwork_due_date %>
+</p>
+
+<p>
+  <strong>Artwork proof link:</strong>
+  <%= @quote.artwork_proof_link %>
+</p>
+
+<p>
+  <strong>Production notes:</strong>
+  <%= @quote.production_notes %>
+</p>
+
+<p>
+  <strong>Quote status:</strong>
+  <%= @quote.quote_status %>
+</p>
+
+<p>
+  <strong>Quote link:</strong>
+  <%= @quote.quote_link %>
+</p>
+
+<p>
+  <strong>Order ship date:</strong>
+  <%= @quote.order_ship_date %>
+</p>
+
+<p>
+  <strong>Order installation date:</strong>
+  <%= @quote.order_installation_date %>
+</p>
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>

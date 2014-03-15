@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quote_information: MyText
+  quote_amount: 9.99
+  quote_due_date: 2014-03-15
+  artwork_due_date: 2014-03-15
+  artwork_proof_link: 2014-03-15
+  production_notes: MyText
+  quote_status: MyString
+  quote_link: MyString
+  order_ship_date: 2014-03-15
+  order_installation_date: 2014-03-15
+
+two:
+  quote_information: MyText
+  quote_amount: 9.99
+  quote_due_date: 2014-03-15
+  artwork_due_date: 2014-03-15
+  artwork_proof_link: 2014-03-15
+  production_notes: MyText
+  quote_status: MyString
+  quote_link: MyString
+  order_ship_date: 2014-03-15
+  order_installation_date: 2014-03-15
