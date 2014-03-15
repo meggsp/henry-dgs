@@ -1,2 +1,41 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<section id="main-content">
+  <div id="guts">
+
+    <nav style="margin-bottom:50px;">
+      <ul class="group">
+        <li><%= link_to 'New Quote', 'quotes/new' %></li>
+        <li><%= link_to 'Show Quotes', 'quotes' %></li>
+      </ul>
+    </nav>
+
+
+    <div id="col1">
+      <h2>Previous Day</h2>
+
+      <div id="to-be-shipped">
+        <h3>To Be Shipped</h3>
+
+      </div>
+
+    </div>
+
+    <div id="col2">
+      <h2><b>Today</b> | Week | Month</h2>
+
+    </div>
+
+    <div id="col3">
+      <h2>Next Day</h2>
+
+      <div id="pending-quotes">
+        <h3>Pending Quotes</h3>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <div style="clear:both;"></div>
+  </div>
+</section>

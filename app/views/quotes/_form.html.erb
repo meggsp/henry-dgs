@@ -11,47 +11,84 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :quote_information %><br>
-    <%= f.text_area :quote_information %>
-  </div>
-  <div class="field">
-    <%= f.label :quote_amount %><br>
-    <%= f.text_field :quote_amount %>
-  </div>
-  <div class="field">
-    <%= f.label :quote_due_date %><br>
-    <%= f.date_select :quote_due_date %>
-  </div>
-  <div class="field">
-    <%= f.label :artwork_due_date %><br>
-    <%= f.date_select :artwork_due_date %>
-  </div>
-  <div class="field">
-    <%= f.label :artwork_proof_link %><br>
-    <%= f.date_select :artwork_proof_link %>
-  </div>
-  <div class="field">
-    <%= f.label :production_notes %><br>
-    <%= f.text_area :production_notes %>
-  </div>
-  <div class="field">
-    <%= f.label :quote_status %><br>
-    <%= f.text_field :quote_status %>
-  </div>
-  <div class="field">
-    <%= f.label :quote_link %><br>
-    <%= f.text_field :quote_link %>
-  </div>
-  <div class="field">
-    <%= f.label :order_ship_date %><br>
-    <%= f.date_select :order_ship_date %>
-  </div>
-  <div class="field">
-    <%= f.label :order_installation_date %><br>
-    <%= f.date_select :order_installation_date %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <section id="main-content">
+      <div id="guts">
+        <div id="project">
+
+              <span class="quote">
+                <%= f.label :quote_status %><br>
+                <%= f.text_field :quote_status %>
+                <%= f.label :quote_link %><br>
+                <%= f.text_field :quote_link %>
+              <%= f.label :quote_status, "Status:" %> <%= f.select(:quote_status, options_for_select([['New', 'New'], ['Open', 'Open'], ['Approved', 'Approved'], ['Closed', 'Closed']])) %>
+
+        </div>
+
+        <div id="customer-demographics">
+          <h2><%= f.label :quote_information, "Quote Information" %></h2>
+          <div class="field">
+            <%= f.text_area :quote_information, :size => "43x14"  %>
+          </div>
+        </div>
+
+        <div id="job-desc">
+          <h2><%= f.label :production_notes %></h2>
+          <div class="field">
+            <%= f.text_area :production_notes, :size => "43x14"   %>
+          </div>
+        </div>
+
+        <div id="dates"><h2 class="page-title">Critical Dates</h2>
+
+          <div class="field">
+            <%= f.label :quote_due_date %><br>
+            <%= f.date_select :quote_due_date %>
+            </div>
+
+          <div class="field">
+            <%= f.label :order_ship_date %><br>
+            <%= f.date_select :order_ship_date %>
+            </div>
+
+          <div class="field">
+            <%= f.label :order_installation_date %><br>
+            <%= f.date_select :order_installation_date %>
+            </div>
+          <div class="field">
+            <%= f.label :quote_due_date %>
+            <%= f.date_select :quote_due_date %>
+          </div>
+
+          <div class="field">
+            <%= f.label :artwork_due_date %><br>
+            <%= f.date_select :artwork_due_date %>
+          </div>
+
+          <div class="field">
+            <%= f.label :quote_amount %><br>
+            <%= f.text_field :quote_amount %>
+          </div>
+
+          <div class="field">
+            <%= f.label :artwork_proof_link %><br>
+            <%= f.date_select :artwork_proof_link %>
+          </div>
+
+        </div>
+        </span>
+      </div>
+      <div style="clear:both;"></div>
+      <div class="actions">
+        <%= f.button :submit %>
+      </div>
+      </div>
+
+      </div>
+
+      <div style="clear:both;"></div>
+
+      </div>
+
+    </section>
+
 <% end %>

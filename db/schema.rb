@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140315143016) do
+ActiveRecord::Schema.define(version: 20140315152430) do
+
+  create_table "customers", force: true do |t|
+    t.text     "company_name"
+    t.text     "primary_contact_name"
+    t.integer  "primary_contact_phone"
+    t.string   "primary_contact_email"
+    t.text     "primary_contact_address_city_state_zip"
+    t.text     "billing_contact_name"
+    t.integer  "billing_contact_phone"
+    t.string   "billing_contact_email"
+    t.string   "billing_contact_address_city_state_zip"
+    t.string   "install_contact_name"
+    t.string   "company_division_sub"
+    t.boolean  "customer_state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "quotes", force: true do |t|
     t.text     "quote_information"
