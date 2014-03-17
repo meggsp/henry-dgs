@@ -16,25 +16,22 @@
         <div id="project">
 
               <span class="quote">
-                <%= f.label :quote_status %><br>
-                <%= f.text_field :quote_status %>
-                <%= f.label :quote_link %><br>
-                <%= f.text_field :quote_link %>
+                <%= f.label :quote_link %><%= f.text_field :quote_link %>
               <%= f.label :quote_status, "Status:" %> <%= f.select(:quote_status, options_for_select([['New', 'New'], ['Open', 'Open'], ['Approved', 'Approved'], ['Closed', 'Closed']])) %>
-
+                </span>
         </div>
 
         <div id="customer-demographics">
           <h2><%= f.label :quote_information, "Quote Information" %></h2>
           <div class="field">
-            <%= f.text_area :quote_information, :size => "43x14"  %>
+            <%= f.text_area :quote_information, :size => "73x14"  %>
           </div>
         </div>
 
         <div id="job-desc">
           <h2><%= f.label :production_notes %></h2>
           <div class="field">
-            <%= f.text_area :production_notes, :size => "43x14"   %>
+            <%= f.text_area :production_notes, :size => "73x14"   %>
           </div>
         </div>
 

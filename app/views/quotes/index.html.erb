@@ -1,14 +1,20 @@
 <h1>Quotes | <%= link_to 'New Quote', new_quote_path %></h1>
 
+<section id="main-content">
+  <div id="guts">
+
 <% @quotes.each do |quote| %>
     <div id="quote">
-      <h4>Q#<%= quote.id %> | <%= quote.quote_status %></h4>>
+      <h4>Q#<%= quote.id %> | | <%= quote.quote_status %></h4>>
       <h4>Due Date: <%= quote.quote_due_date %></h4>
       <h4>Ship Date: <%= quote.order_ship_date %></h4>
       <h4>Price: <%= quote.quote_amount %></h4>
-      <p></p><%= quote.quote_link %>
       <span class="excerpt"><%= link_to 'View Quote', quote %> <%= link_to 'Edit', edit_quote_path(quote) %> <%= button_to "delete", quote_path(quote), :method=>:delete, :class=>:destroy %></span>
     </div>
+
+        </div>
+
+    </section>
 
 <% end %>
 

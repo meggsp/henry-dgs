@@ -1,0 +1,62 @@
+<%= form_for(@customers) do |f| %>
+    <% if @customers.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@customers.errors.count, "error") %> prohibited this quote from being saved:</h2>
+
+          <ul>
+            <% @customers.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <section id="main-content">
+      <div id="guts">
+        <div id="project">
+          <h2><%= f.label :company_name %>: <%= f.text_field :company_name %></h2>
+        </div>
+        <div id="customer-demographics">
+          <h2 class="page-title">Primary Details</h2>
+            <%= f.label :primary_contact_name, "Primary Contact Name: " %><%= f.text_field :primary_contact_name %>
+            <br><%= f.label :primary_contact_phone, "Primary Contact Phone: " %><%= f.text_field :primary_contact_phone %>
+            <br><%= f.label :primary_contact_email, "Primary Contact Email: " %><%= f.text_field :primary_contact_email %>
+            <br><%= f.label :primary_contact_address_city_state_zip, "Primary Contact Address: " %><%= f.text_field :primary_contact_address_city_state_zip %>
+          </div>
+        </div>
+
+        <div id="job-desc">
+          <h2 class="page-title">Billing Details</h2>
+          <%= f.label :billing_contact_name, "Billing Contact Name: " %><%= f.text_field :billing_contact_name %>
+          <br><%= f.label :billing_contact_phone, "Billing Contact Phone: " %><%= f.text_field :billing_contact_phone %>
+          <br><%= f.label :billing_contact_email, "Billing Contact Email: " %><%= f.text_field :billing_contact_email %>
+          <br><%= f.label :billing_contact_address_city_state_zip, "Billing Contact Address: " %><br><%= f.text_field :billing_contact_address_city_state_zip, :size => "50x40" %>
+          <div class="field">
+
+          </div>
+        </div>
+
+        <div id="dates"><h2 class="page-title">Customer Details</h2>
+          <%= f.label :install_contact_name, "Install Contact Name: " %><%= f.text_field :install_contact_name %>
+          <br><%= f.label :company_division_sub, "Company Division Sub: " %><%= f.text_field :company_division_sub %>
+          <br><%= f.label :customer_state, "Customer State: " %><%= f.text_field :customer_state %>
+          <br><%= f.label :created_at, "Created At: " %><%= f.date_select :created_at %>
+          <br><%= f.label :updated_at, "Updated At: " %><%= f.date_select :updated_at %>
+        </div>
+        </span>
+      </div>
+      <div style="clear:both;"></div>
+      <div class="actions">
+        <%= f.button :submit %>
+      </div>
+      </div>
+
+      </div>
+
+      <div style="clear:both;"></div>
+
+      </div>
+
+    </section>
+
+<% end %>

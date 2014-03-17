@@ -1,0 +1,15 @@
+<h1>Customers | <%= link_to 'New Customer', new_quote_path %></h1>
+
+<% @customers.each do |customer| %>
+    <div id="quote">
+      <h4>Q# | </h4>>
+      <h4>Due Date: </h4>
+      <h4>Ship Date: </h4>
+      <h4>Price: </h4>
+      <p></p>
+      <span class="excerpt"></span>
+    </div>
+
+<% end %>
+
+<div style="clear:both"></div>
