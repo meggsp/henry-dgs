@@ -1,7 +1,5 @@
 class DashboardController < ApplicationController
   def index
-
-    Customer.order(created_at: :desc)
-
+    @customer = Customer.find(:all, :order => "created_at")
   end
 end
