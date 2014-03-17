@@ -1,5 +1,5 @@
-#!/bin/sh
-BREW_FILE_DIRECTORY=$(dirname "$0")
+#!/path/to/ruby
+BREW_FILE_DIRECTORY=$(dirname "/Users/Paul/.rvm/rubies/ruby-2.1.1/bin/ruby")
 BREW_FILE_DIRECTORY=$(cd "$BREW_FILE_DIRECTORY" && pwd -P)
 
 BREW_FILENAME=$(basename "$0")
