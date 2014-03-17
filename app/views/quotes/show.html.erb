@@ -1,54 +1,48 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Quote information:</strong>
-  <%= @quote.quote_information %>
-</p>
+<section id="main-content">
+  <div id="guts">
+    <div id="project">
+      <h2>Company Name: | Quote Status: <%= @quote.quote_status %></h2>
+    </div>
+    <div id="customer-demographics">
+      <h2>Quote Details</h2>
+      <div class="field">
+      <br><%= @quote.quote_information %>
+    </div>
+  </div>
 
-<p>
-  <strong>Quote amount:</strong>
-  <%= @quote.quote_amount %>
-</p>
+  <div id="job-desc">
+    <h2>Production Notes</h2>
+    <div class="field">
+      <%= @quote.production_notes %>
+    </div>
+  </div>
 
-<p>
-  <strong>Quote due date:</strong>
-  <%= @quote.quote_due_date %>
-</p>
+  <div id="dates"><h2>Customer Details</h2>
+    Quote Amount: <%= @quote.quote_amount %>
+    <br>Order Ship Date: <%= @quote.order_ship_date %>
+    <br>Quote Due Date: <%= @quote.quote_due_date %>
+    <br>Artwork Due Date: <%= @quote.artwork_due_date %>
+    <br>Artwork Proof Link: <%= @quote.artwork_proof_link %>
+    <br>Order Installation Date: <%= @quote.order_installation_date %>
+    <br>Quote Link: <%= @quote.quote_link %>
+    <br>Created At: <%= @quote.created_at %>
+    <br>Updated At: <%= @quote.updated_at %>
+  </div>
+  </span>
+  </div>
+  <div style="clear:both;"></div>
+  <div class="actions">
+    <%= link_to 'Edit', edit_quote_path(@quote) %> |
+    <%= link_to 'Back', quotes_path %>
+  </div>
+  </div>
 
-<p>
-  <strong>Artwork due date:</strong>
-  <%= @quote.artwork_due_date %>
-</p>
+  </div>
 
-<p>
-  <strong>Artwork proof link:</strong>
-  <%= @quote.artwork_proof_link %>
-</p>
+  </div>
 
-<p>
-  <strong>Production notes:</strong>
-  <%= @quote.production_notes %>
-</p>
+</section>
 
-<p>
-  <strong>Quote status:</strong>
-  <%= @quote.quote_status %>
-</p>
 
-<p>
-  <strong>Quote link:</strong>
-  <%= @quote.quote_link %>
-</p>
-
-<p>
-  <strong>Order ship date:</strong>
-  <%= @quote.order_ship_date %>
-</p>
-
-<p>
-  <strong>Order installation date:</strong>
-  <%= @quote.order_installation_date %>
-</p>
-
-<%= link_to 'Edit', edit_quote_path(@quote) %> |
-<%= link_to 'Back', quotes_path %>

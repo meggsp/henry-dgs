@@ -2,8 +2,15 @@ Henrys::Application.routes.draw do
   resources :customers
   resources :quotes
 
-  get "dashboard/index"
+  get "customers/new"
+  get "customers/index"
+  get "pages/dashboard"
+  get "quotes/new"
+  get "quotes/current_quotes"
+  get "quotes/past_quotes"
   get "quotes/index"
+  get "home/index"
+  get "dashboard/index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

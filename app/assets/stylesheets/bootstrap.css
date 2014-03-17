@@ -5882,7 +5882,7 @@ input.span2 {padding: 5px;}
 .field {font-size: 0.75em;}
 textarea {padding: 10px 0px 0px 0px;}
 #dates {width: 100%;}
-#col1 {width:25%;float:left;margin-top: 50px; padding:3px;border: 5px solid #000;}
+#col1 {width:25%;float:left;margin-top: 50px; padding:3px;border: 5px solid #000;text-align:center;}
 #col2 {width:50%;float:left;margin-top: 50px;}
 #col3 {width:25%;float:left;margin-top: 50px; padding: 3px;border: 5px solid #000;}
 ul#quotes-row {width:200px; margin:auto auto;list-style-type: none;}

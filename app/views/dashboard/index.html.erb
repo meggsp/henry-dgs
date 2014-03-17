@@ -14,17 +14,20 @@
 
       <div id="to-be-shipped">
         <h3>To Be Shipped</h3>
-        <% @quote.each do |shipped| %>
-            <%= shipped.id %>
+        <% @quote.each do |tobeshipped| %>
+            #<%= tobeshipped.id %>: Company Name
         <% end %>
 
       </div>
 
     </div>
 
-    <div id="col2">
-      <h2><b>Today</b> | Week | Month</h2>
-
+    <div id="col2" style="text-align:center;">
+      <h2><b>Today</b></h2>
+      <% @quote.each do |today| %>
+          #<%= today.id %> Company Name - <%= today.created_at %> | <%= link_to today.id, today %>
+          <br>
+      <% end %>
     </div>
 
     <div id="col3">
@@ -32,7 +35,9 @@
 
       <div id="pending-quotes">
         <h3>Pending Quotes</h3>
-
+        <% @quote.each do |pending| %>
+            #<%= pending.id %>: Company Name
+        <% end %>
       </div>
 
 
