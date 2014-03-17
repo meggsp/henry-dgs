@@ -16,7 +16,8 @@
         <div id="project">
 
               <span class="quote">
-                <%= f.label :quote_link %><%= f.text_field :quote_link %>
+                Company Name: <%= link_to "New Customer", new_customer_url, :onclick => "javascript:window.open('/customers/new','popup','width=500,height=900,scrollbars=yes');" %>
+
               <%= f.label :quote_status, "Status:" %> <%= f.select(:quote_status, options_for_select([['New', 'New'], ['Open', 'Open'], ['Approved', 'Approved'], ['Closed', 'Closed']])) %>
                 </span>
         </div>
@@ -71,6 +72,10 @@
             <%= f.date_select :artwork_proof_link %>
           </div>
 
+          <div class="field">
+            <%= f.label :quote_link %>
+            <%= f.text_field :quote_link %>
+            </div>
         </div>
         </span>
       </div>

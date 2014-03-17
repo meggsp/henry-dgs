@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<section id="main-content">
+  <div id="guts">
+    <div id="project">
+      <h2>Company Name: <%= @customer.company_name %></h2>
+    </div>
+    <div id="customer-demographics">
+      <h2>Primary Details</h2>
+      <br>Primary Contact Name: <%= @customer.primary_contact_name %>
+      <br>Primary Contact Phone: <%= @customer.primary_contact_phone %>
+      <br>Primary Contact Email: <%= @customer.primary_contact_email %>
+      <br>Primary Contact Address: <%= @customer.primary_contact_address_city_state_zip %>
+    </div>
+  </div>
+
+  <div id="job-desc">
+    <h2>Billing Details</h2>
+    <br>Billing Contact Name: <%= @customer.billing_contact_name %>
+    <br>Billing Contact Phone: <%= @customer.billing_contact_phone %>
+    <br>Billing Contact Email: <%= @customer.billing_contact_email %>
+    <br>Billing Contact Address: <%= @customer.billing_contact_address_city_state_zip %>
+    <div class="field">
+
+    </div>
+  </div>
+
+  <div id="dates"><h2>Customer Details</h2>
+    Install Contact Name: <%= @customer.install_contact_name %>
+    <br>Company Division Sub: <%= @customer.company_division_sub %>
+    <br>Customer State: <%= @customer.customer_state %>
+    <br>Created At: <%= @customer.created_at %>
+    <br>Updated At: <%= @customer.updated_at %>
+  </div>
+  </span>
+  </div>
+  <div style="clear:both;"></div>
+  <div class="actions">
+    <%= link_to 'Edit', edit_customer_path(@customer) %> |
+    <%= link_to 'Back', customers_path %>
+  </div>
+  </div>
+
+  </div>
+
+  </div>
+
+</section>
+
+

@@ -3,9 +3,9 @@
 <section id="main-content">
   <div id="guts">
 
-<% @quotes.each do |quote| %>
+<% @quote.each do |quote| %>
     <div id="quote">
-      <h4>Q#<%= quote.id %> | | <%= quote.quote_status %></h4>>
+      <h4>Q#<%= quote.id %> | Company Name | <%= quote.quote_status %></h4>>
       <h4>Due Date: <%= quote.quote_due_date %></h4>
       <h4>Ship Date: <%= quote.order_ship_date %></h4>
       <h4>Price: <%= quote.quote_amount %></h4>

@@ -1,15 +1,19 @@
-<h1>Customers | <%= link_to 'New Customer', new_quote_path %></h1>
+<section id="main-content">
+  <div id="guts">
 
-<% @customers.each do |customer| %>
+<h1>Listing customers | <span class="new"><%= link_to 'New Customer', new_customer_path %></span></h1>
+
+<% @customer.each do |customer| %>
     <div id="quote">
-      <h4>Q# | </h4>>
-      <h4>Due Date: </h4>
-      <h4>Ship Date: </h4>
-      <h4>Price: </h4>
-      <p></p>
-      <span class="excerpt"></span>
+      <h4>#<%= customer.id %> | <%= customer.company_name %></h4>
+      <div style="clear:both;"></div>
+        <ul style="width: 250px;list-style-type: none;margin-left: -45px;">
+          <li style="float:left;"><%= button_to 'Edit', edit_customer_path(customer) %></li>
+          <li style="float:left;"><%= button_to "delete", customer_path(customer), :method=>:delete, :class=>:destroy %></li>
+          <li style="float:left;"><%= button_to 'View Quote', customer %></li>
+        </ul>
     </div>
+    <% end %>
 
-<% end %>
-
-<div style="clear:both"></div>
+      </div>
+  </section>
