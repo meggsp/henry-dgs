@@ -1,11 +1,16 @@
 class QuotesController < ApplicationController
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
+  autocomplete :customer, :company_name, :full => true
 
   # GET /quotes
   # GET /quotes.json
   def index
-    @quote = Quote.all
+    # @quote = Quote.all
+    @quote = Quote.order(params[:sort])
+    
   end
+  
+  
 
   # GET /quotes/1
   # GET /quotes/1.json
@@ -67,6 +72,6 @@ class QuotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def quote_params
-      params.require(:quote).permit(:quote_information, :quote_amount, :quote_due_date, :artwork_due_date, :artwork_proof_link, :production_notes, :quote_status, :quote_link, :order_ship_date, :order_installation_date)
+      params.require(:quote).permit(:company_name, :quote_information, :quote_amount, :quote_due_date, :artwork_due_date, :artwork_proof_link, :production_notes, :quote_status, :quote_link, :order_ship_date, :order_installation_date)
     end
 end

@@ -1,6 +1,7 @@
 class DashboardController < ApplicationController
   def index
-    @quote = Quote.all
+    # @quote = Quote.all
+    @quote = Quote.order(params[:sort])
   end
 
   def pending

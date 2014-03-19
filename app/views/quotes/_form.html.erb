@@ -16,7 +16,10 @@
         <div id="project">
 
               <span class="quote">
-                Company Name: <%= link_to "New Customer", new_customer_url, :onclick => "javascript:window.open('/customers/new','popup','width=500,height=900,scrollbars=yes');" %>
+                Company Name: <%= form_for @quote do |f|
+  f.autocomplete_field :company_name, autocomplete_company_name_quotes_path
+end %> 
+                <%= link_to "New Customer", new_customer_url, :onclick => "javascript:window.open('/customers/new','popup','width=500,height=900,scrollbars=yes');" %>
 
               <%= f.label :quote_status, "Status:" %> <%= f.select(:quote_status, options_for_select([['New', 'New'], ['Open', 'Open'], ['Approved', 'Approved'], ['Closed', 'Closed']])) %>
                 </span>

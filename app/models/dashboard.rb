@@ -1,7 +1,5 @@
 class Quote < ActiveRecord::Base
-
-belongs_to :customers
-  
+  belongs_to :customers
   
 
 end

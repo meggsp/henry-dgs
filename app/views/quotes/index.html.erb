@@ -3,13 +3,25 @@
 <section id="main-content">
   <div id="guts">
 
+    <div id="sort">
+    Sort by: 
+    <%= link_to "Company Name", :sort => "company_name" %>
+    <%= link_to "Quote Due Date", :sort => "quote_due_date" %> | 
+    <%= link_to "Ship Date", :sort => "order_ship_date" %> | 
+    <%= link_to "Artwork Due Date", :sort => "artwork_due_date" %> | 
+    <%= link_to "Quote Status", :sort => "quote_status" %>
+    </div>
 <% @quote.each do |quote| %>
     <div id="quote">
-      <h4>Q#<%= quote.id %> | Company Name | <%= quote.quote_status %></h4>>
-      <h4>Due Date: <%= quote.quote_due_date %></h4>
-      <h4>Ship Date: <%= quote.order_ship_date %></h4>
-      <h4>Price: <%= quote.quote_amount %></h4>
-      <span class="excerpt"><%= link_to 'View Quote', quote %> <%= link_to 'Edit', edit_quote_path(quote) %> <%= button_to "delete", quote_path(quote), :method=>:delete, :class=>:destroy %></span>
+      Q#<%= quote.id %> | 
+      Company Name: <%= quote.company_name %> |
+      Status:<%= quote.quote_status %> |
+      Due Date: <%= quote.quote_due_date %> |
+      Ship Date: <%= quote.order_ship_date %>
+      Price: <%= number_to_currency(quote.quote_amount, :unit => "$") %> 
+      <%= link_to 'View Quote', quote %> 
+      <%= link_to 'Edit', edit_quote_path(quote) %> 
+      <%= link_to 'Delete', quote_path(quote), :method=>:delete, :class=>:destroy %>
     </div>
     <% end %>
 

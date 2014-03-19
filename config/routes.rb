@@ -1,4 +1,8 @@
 Henrys::Application.routes.draw do
+  resources :quotes do
+    get :autocomplete_company_name, :on => :collection
+  end
+
   resources :customers
   resources :quotes
 
