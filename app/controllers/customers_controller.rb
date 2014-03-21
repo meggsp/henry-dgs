@@ -1,6 +1,7 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
-
+  autocomplete :company_name, :full => true
+  
   # GET /customers
   # GET /customers.json
   def index

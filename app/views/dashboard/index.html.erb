@@ -1,49 +1,37 @@
 <section id="main-content">
   <div id="guts">
 
-    <nav style="margin-bottom:50px;">
+    <nav>
       <ul class="group">
         <li><%= link_to 'New Quote', 'quotes/new' %></li>
         <li><%= link_to 'Show Quotes', 'quotes' %></li>
+        <div style="clear:both;"></div>
       </ul>
     </nav>
 
-
-    <div id="col1">
-      <h2>Previous Day</h2>
-
-      <div id="to-be-shipped">
-        <h3>To Be Shipped</h3>
-       <% @quote.each do |today| %>
-          #<%= today.id %> <%= today.company_name %> - <%= today.created_at %> | <%= link_to today.id, today %>
-          <br>
-      <% end %>
-      </div>
-
-    </div>
-
     <div id="col2" style="text-align:center;">
-      <h2><b>Today</b></h2>
-      <% @quote.each do |today| %>
-          #<%= today.id %> <%= today.company_name %> - <%= today.created_at %> | <%= link_to today.id, today %>
-          <br>
-      <% end %>
-    </div>
-
-    <div id="col3">
-      <h2>Next Day</h2>
-
-      <div id="pending-quotes">
-        <h3>Pending Quotes</h3>
-        <% @quote.each do |pending| %>
-            #<%= pending.id %> <%= pending.company_name %> - <%= pending.created_at %> | <%= link_to pending.id, pending %>
-        <% end %>
+      <h2>Today - <%= Time.now.strftime("%B %d, %Y") %></h2>
+      <div class="to-be-shipped">
+        <h3>To Be Shipped</h3>
+        <% @to_be_shipped.each do |shipped| %>
+            #<%= shipped.id %> <%= shipped.company_name %> <%= link_to 'View', shipped %> <br>
+         <% end %>
+         
       </div>
-
-
+      
+      
+      <div class="quotes-due">
+        <h3>Quotes Due</h3>
+        <% @quotes_due.each do |quote_due| %>
+            #<%= quote_due.id %> <%= quote_due.company_name %> <%= link_to 'View', quote_due %> <br>
+         <% end %>
+      </div>
     </div>
+
+  
   </div>
 
   <div style="clear:both;"></div>
+
   </div>
 </section>

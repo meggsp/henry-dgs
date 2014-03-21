@@ -5,16 +5,21 @@ class QuotesController < ApplicationController
   # GET /quotes
   # GET /quotes.json
   def index
-    # @quote = Quote.all
+    @quote = Quote.all
     @quote = Quote.order(params[:sort])
-    
+    # Quote.where(created_at: (Time.now.midnight - 1.day)..Time.now.midnight)
   end
   
-  
+  #def timestamp
+    #self[:timestamp] ||= Time.parse("#{self[:created_date].strftime("%Y-%m-%d")}")
+    # @quote_by_date = @quote.group_by(&:created_at)
+    # @date = params[:date] ? Date.parse(params[:date]) : Date.tomorrow
+  #end  
 
   # GET /quotes/1
   # GET /quotes/1.json
   def show
+    @quote = Quote.find(params[:id])
   end
 
   # GET /quotes/new

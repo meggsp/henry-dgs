@@ -1,16 +1,13 @@
 class DashboardController < ApplicationController
+
   def index
     # @quote = Quote.all
-    @quote = Quote.order(params[:sort])
+    @quote = Quote.all
+    
+    # HERE <----    
+    # @yesterday_quotes = Quote.where(created_at: (Time.now.midnight - 1.day)) # Load yesterday's quotes here
+    @to_be_shipped = Quote.where(order_ship_date: (Time.now.midnight.strftime('%Y-%m-%d'))) # Load today's quotes here
+    @quotes_due  = Quote.where(quote_due_date: (Time.now.midnight.strftime('%Y-%m-%d'))) # Load tomorrow's quotes here
   end
-
-  def pending
-    @quote_by_date = @quote.group_by(&:created_at)
-    @date = params[:date] ? Date.parse(params[:date]) : Date.tomorrow
-  end
-
-  def tobeshipped
-    @quote_by_date = @quote.group_by(&:created_at)
-    @date = params[:date] ? Date.parse(params[:date]) : Date.yesterday
-  end
+  
 end

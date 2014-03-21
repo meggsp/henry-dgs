@@ -16,10 +16,9 @@
         <div id="project">
 
               <span class="quote">
-                Company Name: <%= form_for @quote do |f|
-  f.autocomplete_field :company_name, autocomplete_company_name_quotes_path
-end %> 
-                <%= link_to "New Customer", new_customer_url, :onclick => "javascript:window.open('/customers/new','popup','width=500,height=900,scrollbars=yes');" %>
+                Company Name: <%= f.autocomplete_field :company_name, autocomplete_company_name_quotes_path %>
+
+                <%= link_to "New Customer", "", :onclick => "javascript:window.open('/customers/new','popup','width=500,height=900,scrollbars=yes');" %>
 
               <%= f.label :quote_status, "Status:" %> <%= f.select(:quote_status, options_for_select([['New', 'New'], ['Open', 'Open'], ['Approved', 'Approved'], ['Closed', 'Closed']])) %>
                 </span>
@@ -28,33 +27,33 @@ end %>
         <div id="customer-demographics">
           <h2><%= f.label :quote_information, "Quote Information" %></h2>
           <div class="field">
-            <%= f.text_area :quote_information, :size => "73x14"  %>
+            <%= f.text_area :quote_information, :size => "58x14", class: "notes"  %>
           </div>
         </div>
 
         <div id="job-desc">
           <h2><%= f.label :production_notes %></h2>
           <div class="field">
-            <%= f.text_area :production_notes, :size => "73x14"   %>
+            <%= f.text_area :production_notes, :size => "58x14", class: "notes"   %>
           </div>
         </div>
 
         <div id="dates"><h2 class="page-title">Critical Dates</h2>
 
           <div class="field">
-            <%= f.label :quote_due_date %><%= f.text_field :quote_due_date %>
+            <%= f.label :quote_due_date %><%= f.date_field :quote_due_date %>
             </div>
 
           <div class="field">
-            <%= f.label :order_ship_date %><%= f.text_field :order_ship_date %>
+            <%= f.label :order_ship_date %><%= f.date_field :order_ship_date %>
             </div>
 
           <div class="field">
-            <%= f.label :order_installation_date %><%= f.text_field :order_installation_date %>
+            <%= f.label :order_installation_date %><%= f.date_field :order_installation_date %>
             </div>
 
           <div class="field">
-            <%= f.label :artwork_due_date %><%= f.text_field :artwork_due_date %>
+            <%= f.label :artwork_due_date %><%= f.date_field :artwork_due_date %>
           </div>
 
           <div class="field">
@@ -68,6 +67,7 @@ end %>
           <div class="field">
             <%= f.label :quote_link %><%= f.text_field :quote_link %>
             </div>
+          
         </div>
         </span>
       </div>

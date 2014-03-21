@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140318211834) do
+ActiveRecord::Schema.define(version: 20140321180603) do
 
   create_table "customers", force: true do |t|
     t.string   "company_name"
@@ -31,19 +31,19 @@ ActiveRecord::Schema.define(version: 20140318211834) do
   end
 
   create_table "quotes", force: true do |t|
-    t.text     "quote_information"
-    t.decimal  "quote_amount"
-    t.datetime "quote_due_date"
-    t.date     "artwork_due_date"
-    t.date     "artwork_proof_link"
-    t.text     "production_notes"
-    t.string   "quote_status"
-    t.string   "quote_link"
-    t.datetime "order_ship_date"
-    t.date     "order_installation_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "company_name"
+    t.text    "quote_information"
+    t.decimal "quote_amount"
+    t.date    "quote_due_date"
+    t.date    "artwork_due_date"
+    t.text    "artwork_proof_link"
+    t.text    "production_notes"
+    t.string  "quote_status"
+    t.string  "quote_link"
+    t.date    "order_ship_date"
+    t.date    "order_installation_date"
+    t.date    "created_at"
+    t.date    "updated_at"
+    t.string  "company_name"
   end
 
   create_table "search_suggestions", force: true do |t|
