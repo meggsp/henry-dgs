@@ -18,3 +18,4 @@
 //= require turbolinks
 //= require_tree .
 //= require autocomplete-rails
+//= require chosen-jquery

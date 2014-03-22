@@ -8,6 +8,8 @@
         <div style="clear:both;"></div>
       </ul>
     </nav>
+    
+
 
     <div id="col2" style="text-align:center;">
       <h2>Today - <%= Time.now.strftime("%B %d, %Y") %></h2>
@@ -16,7 +18,6 @@
         <% @to_be_shipped.each do |shipped| %>
             #<%= shipped.id %> <%= shipped.company_name %> <%= link_to 'View', shipped %> <br>
          <% end %>
-         
       </div>
       
       
@@ -26,7 +27,10 @@
             #<%= quote_due.id %> <%= quote_due.company_name %> <%= link_to 'View', quote_due %> <br>
          <% end %>
       </div>
+      <div style="clear:both;"></div>
     </div>
+       
+       
 
   
   </div>

@@ -8,7 +8,7 @@
     <div id="customer-demographics">
       <h2>Quote Details</h2>
       <div class="field">
-      <br><%= @quote.quote_information %>
+      <%= @quote.quote_information %>
     </div>
   </div>
 
@@ -20,7 +20,7 @@
   </div>
 
   <div id="dates"><h2>Customer Details</h2>
-    Quote Amount: <%= @quote.quote_amount %>
+    Quote Amount: $<%= @quote.quote_amount%>
     <br>Order Ship Date: <%= @quote.order_ship_date %>
     <br>Quote Due Date: <%= @quote.quote_due_date %>
     <br>Artwork Due Date: <%= @quote.artwork_due_date %>

@@ -1,8 +1,11 @@
-<h1>Quotes | <%= link_to 'New Quote', new_quote_path %></h1>
+<nav>
+      <ul class="group" style="width: 270px;">
+        <li><%= link_to 'New Quote', new_quote_path %></li>
+  </ul>
+</nav>
 
 <section id="main-content">
   <div id="guts">
-    <h3>Sort By:</h3>
       <ul id="sort"> 
         <li><%= link_to "ID", :sort => "id" %></li>
         <li><%= link_to "Company Name", :sort => "company_name" %></li>
@@ -20,7 +23,7 @@
         <li><%= quote.order_ship_date %></li>
         <li><%= quote.artwork_due_date %></li>
         <li><%= quote.quote_status %></li>
-        <br>
+        <div style="clear:both;"></div>
       <%= link_to 'View Quote', quote, :class=>:show %> 
       <%= link_to 'Edit', edit_quote_path(quote), :class=>:edit %> 
       <%= link_to 'Delete', quote_path(quote), :method=>:delete, :class=>:destroy %>

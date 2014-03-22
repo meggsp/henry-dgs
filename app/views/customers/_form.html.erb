@@ -40,8 +40,8 @@
         <%= f.label :install_contact_name, "Install Contact Name: " %><%= f.text_field :install_contact_name %>
         <br><%= f.label :company_division_sub, "Company Division Sub: " %><%= f.text_field :company_division_sub %>
         <br><%= f.label :customer_state, "Status:" %> <%= f.select(:customer_state, options_for_select([['Active', 'Active'], ['Inactive', 'Inactive']])) %>
-        <br><%= f.label :created_at, "Created At: " %><%= f.date_select :created_at %>
-        <br><%= f.label :updated_at, "Updated At: " %><%= f.date_select :updated_at %>
+        <br><%= f.label :created_at, "Created At: " %><%= f.date_field :created_at %>
+        <br><%= f.label :updated_at, "Updated At: " %><%= f.date_field :updated_at %>
       </div>
       </span>
       </div>

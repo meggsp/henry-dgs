@@ -284,8 +284,8 @@ button,
 select,
 textarea {
   font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  font-size: 1.2em;
+  line-height: 30px;
 }
 a {
   color: #428bca;
@@ -5802,7 +5802,7 @@ h4.web-app {padding:0px 0px 0px 12px;margin-top:-15px;}
 h2.page-title {font-size: 2em;border-bottom: #000 3px solid;}
 
 nav ul {
-    list-style: none; width: 450px; position: relative; margin:0px auto;
+    list-style: none; width: 490px; position: relative; margin:0px auto;
 }
 nav ul li { display: inline; }
 nav ul li a {
@@ -5849,7 +5849,7 @@ textarea.notes {padding: 10px;font-size: 1.2em;}
 
 #existing-customer, #new-project {width: 25%;border: 3px solid #000;padding: 10px;text-align: center;font-size: 2em;float: left;margin: 10px 40px 0px 0px;}
 
-#customer-demographics, #job-desc {width: 405px;padding: 10px 0px 0px 10px;border: 3px #000 solid;clear: right;margin: 10px 40px 10px 0px;}
+#customer-demographics, #job-desc {width: 405px;padding: 10px 0px 0px 10px;border: 3px #000 solid;clear: right;margin: 10px 40px 10px 0px;font-size: 1.5em;}
 #job-desc {float:right;}
 #customer-demographics {float:left;}
 
@@ -5901,3 +5901,7 @@ ul#quotes li {float:left;list-style-type: none;clear:both;}
 ul.group {}
 ul.group li a {line-height: 34px;height:40px;}
 ul.group li a:hover {background:#ffcc00;text-decoration:none;}
+form#quote_quote_due_date {padding: 10px 20px 0px 0px;}
+.field_label {padding: 10px 10px 10px 0px;font-size: 22px;font-weight: 100;}
+input {line-height: 30px;padding: 5px 20px 5px 10px;  font-size: 1.2em;}
+.chosen-choices {padding: 20px 0px 20px 10px;}

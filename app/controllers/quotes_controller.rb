@@ -15,11 +15,15 @@ class QuotesController < ApplicationController
     # @quote_by_date = @quote.group_by(&:created_at)
     # @date = params[:date] ? Date.parse(params[:date]) : Date.tomorrow
   #end  
+  
+  def edit
+    @quote = Quote.find params[:id]
+  end
+  
 
   # GET /quotes/1
   # GET /quotes/1.json
   def show
-    @quote = Quote.find(params[:id])
   end
 
   # GET /quotes/new

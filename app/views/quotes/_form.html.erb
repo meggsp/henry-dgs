@@ -16,56 +16,54 @@
         <div id="project">
 
               <span class="quote">
-                Company Name: <%= f.autocomplete_field :company_name, autocomplete_company_name_quotes_path %>
-
+                <%= f.select :company_name, Customer.all.map { |u| [u.company_name, u.company_name] }, { include_blank: true }, { class: 'chosen-select' } %>
                 <%= link_to "New Customer", "", :onclick => "javascript:window.open('/customers/new','popup','width=500,height=900,scrollbars=yes');" %>
-
-              <%= f.label :quote_status, "Status:" %> <%= f.select(:quote_status, options_for_select([['New', 'New'], ['Open', 'Open'], ['Approved', 'Approved'], ['Closed', 'Closed']])) %>
+                <%= f.label :quote_status, "Status:", style: 'margin-left:110px' %> <%= f.select(:quote_status, options_for_select([['New', 'New'], ['Open', 'Open'], ['Approved', 'Approved'], ['Closed', 'Closed']])) %>
                 </span>
         </div>
 
         <div id="customer-demographics">
           <h2><%= f.label :quote_information, "Quote Information" %></h2>
           <div class="field">
-            <%= f.text_area :quote_information, :size => "58x14", class: "notes"  %>
+            <%= f.text_area :quote_information, :size => "39x14", class: "notes"  %>
           </div>
         </div>
 
         <div id="job-desc">
           <h2><%= f.label :production_notes %></h2>
           <div class="field">
-            <%= f.text_area :production_notes, :size => "58x14", class: "notes"   %>
+            <%= f.text_area :production_notes, :size => "39x14", class: "notes"   %>
           </div>
         </div>
 
         <div id="dates"><h2 class="page-title">Critical Dates</h2>
 
           <div class="field">
-            <%= f.label :quote_due_date %><%= f.date_field :quote_due_date %>
+            <%= f.label :quote_due_date, class: "field_label" %><%= f.date_field :quote_due_date %>
             </div>
 
           <div class="field">
-            <%= f.label :order_ship_date %><%= f.date_field :order_ship_date %>
+            <%= f.label :order_ship_date, class: "field_label" %><%= f.date_field :order_ship_date %>
             </div>
 
           <div class="field">
-            <%= f.label :order_installation_date %><%= f.date_field :order_installation_date %>
+            <%= f.label :order_installation_date, class: "field_label" %><%= f.date_field :order_installation_date %>
             </div>
 
           <div class="field">
-            <%= f.label :artwork_due_date %><%= f.date_field :artwork_due_date %>
+            <%= f.label :artwork_due_date, class: "field_label" %><%= f.date_field :artwork_due_date %>
           </div>
 
           <div class="field">
-            <%= f.label :quote_amount %><%= f.text_field :quote_amount %>
+            <%= f.label :quote_amount, class: "field_label" %><%= f.text_field :quote_amount %>
           </div>
 
           <div class="field">
-            <%= f.label :artwork_proof_link %><%= f.text_field :artwork_proof_link %>
+            <%= f.label :artwork_proof_link, class: "field_label" %><%= f.text_field :artwork_proof_link %>
           </div>
 
           <div class="field">
-            <%= f.label :quote_link %><%= f.text_field :quote_link %>
+            <%= f.label :quote_link, class: "field_label"  %><%= f.text_field :quote_link %>
             </div>
           
         </div>
