@@ -1,7 +1,7 @@
 class Quote < ActiveRecord::Base
 belongs_to :customers
   validates :company_name, :presence => true
-  
+  validates :quote_information, :presence => true
   
   #def company_name
     #customers.try(:company_name)

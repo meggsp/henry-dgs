@@ -2,6 +2,14 @@ class QuotesController < ApplicationController
   before_action :set_quote, only: [:show, :edit, :update, :destroy]
   autocomplete :customer, :company_name, :full => true
 
+  before_filter :check_for_cancel, :only => [:create, :update]
+
+  def check_for_cancel
+    if params[:commit] == "Cancel"
+      redirect_to quote_path
+    end
+  end
+  
   # GET /quotes
   # GET /quotes.json
   def index

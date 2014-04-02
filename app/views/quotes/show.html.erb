@@ -24,9 +24,9 @@
     <br>Order Ship Date: <%= @quote.order_ship_date %>
     <br>Quote Due Date: <%= @quote.quote_due_date %>
     <br>Artwork Due Date: <%= @quote.artwork_due_date %>
-    <br>Artwork Proof Link: <%= @quote.artwork_proof_link %>
+    <br>Artwork Proof Link: <%= link_to 'Link To Artwork Proof', @quote.artwork_proof_link %>
     <br>Order Installation Date: <%= @quote.order_installation_date %>
-    <br>Quote Link: <%= @quote.quote_link %>
+    <br>Quote Link: <%= link_to 'Link To Quote', @quote.quote_link %>
     <br>Updated At: <%= @quote.updated_at %>
   </div>
   </span>

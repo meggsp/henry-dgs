@@ -10,8 +10,8 @@
         <li><%= link_to "ID", :sort => "id" %></li>
         <li><%= link_to "Company Name", :sort => "company_name" %></li>
         <li><%= link_to "Quote Due Date", :sort => "quote_due_date" %></li>
-        <li><%= link_to "Ship Date", :sort => "order_ship_date" %></li>
         <li><%= link_to "Artwork Due Date", :sort => "artwork_due_date" %></li>
+        <li><%= link_to "Ship Date", :sort => "order_ship_date" %></li>
         <li><%= link_to "Quote Status", :sort => "quote_status" %></li>
       </ul>
     
@@ -26,7 +26,7 @@
         <div style="clear:both;"></div>
       <%= link_to 'View Quote', quote, :class=>:show %> 
       <%= link_to 'Edit', edit_quote_path(quote), :class=>:edit %> 
-      <%= link_to 'Delete', quote_path(quote), :method=>:delete, :class=>:destroy %>
+      <%= link_to 'Delete', quote_path(quote), :method=>:delete, :class=>:destroy, :confirm => 'Are you sure?' %>
       </ul>
     <% end %>
 

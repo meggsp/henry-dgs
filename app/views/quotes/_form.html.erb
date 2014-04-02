@@ -17,7 +17,7 @@
 
               <span class="quote">
                 <%= f.select :company_name, Customer.all.map { |u| [u.company_name, u.company_name] }, { include_blank: true }, { class: 'chosen-select' } %>
-                <%= link_to "New Customer", "", :onclick => "javascript:window.open('/customers/new','popup','width=500,height=900,scrollbars=yes');" %>
+                <%= link_to "New Customer", "", :onclick => "javascript:window.open('/customers/new','popup','width=960,height=900,scrollbars=yes');" %>
                 <%= f.label :quote_status, "Status:", style: 'margin-left:110px' %> <%= f.select(:quote_status, options_for_select([['New', 'New'], ['Open', 'Open'], ['Approved', 'Approved'], ['Closed', 'Closed']])) %>
                 </span>
         </div>
@@ -47,7 +47,7 @@
             </div>
 
           <div class="field">
-            <%= f.label :order_installation_date, class: "field_label" %><%= f.date_field :order_installation_date %>
+            <%= f.label :installation_date, class: "field_label" %><%= f.date_field :order_installation_date %>
             </div>
 
           <div class="field">
