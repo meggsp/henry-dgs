@@ -30,7 +30,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # or if using bundler (as with Rails), add the following to your Gemfile
-gem "therubyracer", '~> 0.12.1'
+gem 'therubyracer'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
