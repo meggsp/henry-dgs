@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.1.1"
+# ruby “1.9.3”
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
@@ -29,8 +29,8 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+# or if using bundler (as with Rails), add the following to your Gemfile
+gem "therubyracer", '~> 0.12.1'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -42,19 +42,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'jquery-ui-rails'
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
-# Use Capistrano for deployment
-gem 'capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
