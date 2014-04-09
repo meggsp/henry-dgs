@@ -9,8 +9,9 @@ group :production do
   gem 'sqlite3'
 end
 
-group :development, :test do
+group :development do
   gem 'sqlite3'
+  gem 'capistrano'
 end
 
 gem 'jquery-ui-rails'
