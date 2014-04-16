@@ -1,6 +1,5 @@
 class CreateCustomers < ActiveRecord::Migration
   def change
-    drop_table :customers
     create_table :customers do |t|
       t.string :company_name
       t.string :primary_contact_name

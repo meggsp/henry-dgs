@@ -16,7 +16,6 @@ group :development do
   gem 'capistrano'
 end
 
-gem 'jquery-ui-rails'
 gem 'bootstrap-datepicker-rails'
 gem 'chosen-rails'
 
