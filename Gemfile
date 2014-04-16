@@ -6,7 +6,7 @@ gem 'rails', '4.0.3'
 
 
 group :production do
-  gem 'postgres'
+  gem 'pg'
 end
 
 group :development do
