@@ -7,6 +7,12 @@
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
       <libraries />
     </data-source>
+    <data-source source="LOCAL" name="Rails Henrys: production" uuid="8661fb37-f131-4a16-bad2-af370ab07978">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/db/production.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
   </component>
 </project>
 
