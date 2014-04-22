@@ -5,14 +5,9 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
+gem 'pg'
 
-group :production do
-  gem 'pg'
-end
-
-group :development do
-  gem 'capistrano'
-end
+gem 'capistrano'
 
 gem 'bootstrap-datepicker-rails'
 gem 'chosen-rails'
