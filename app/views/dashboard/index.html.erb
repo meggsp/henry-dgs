@@ -1,0 +1,41 @@
+<section id="main-content">
+  <div id="guts">
+
+    <nav>
+      <ul class="group">
+        <li><%= link_to 'New Quote', 'quotes/new' %></li>
+        <li><%= link_to 'Show Quotes', 'quotes' %></li>
+        <div style="clear:both;"></div>
+      </ul>
+    </nav>
+    
+
+
+    <div id="col2" style="text-align:center;">
+      <h2>Today - <%= Time.now.strftime("%B %d, %Y") %></h2> 
+      
+      <div class="quotes-due">
+        <h3>Quotes Due</h3>
+        <% @quotes_due.each do |quote_due| %>
+            #<%= quote_due.id %> <%= quote_due.company_name %> <%= link_to 'View', quote_due %> <br>
+         <% end %>
+      </div>
+      
+      <div class="to-be-shipped">
+        <h3>To Be Shipped</h3>
+        <% @to_be_shipped.each do |shipped| %>
+            #<%= shipped.id %> <%= shipped.company_name %> <%= link_to 'View', shipped %> <br>
+         <% end %>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+       
+       
+
+  
+  </div>
+
+  <div style="clear:both;"></div>
+
+  </div>
+</section>

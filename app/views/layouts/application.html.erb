@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Henrys</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+
+
+  <!-- Bootstrap -->
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <link href="stylesheets/bootstrap.css" rel="stylesheet" media="screen">
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "autocomplete-rails.js" %>
+  <script src="javascripts/bootstrap.min.js"></script>
+
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<h1>HENRY v1.0</h4>
+  <h2 style="text-align:center;font-weight:600;"><a href="http://henry-dgs.herokuapp.com/">Home</a></h2>
+
+<%= yield %>
+
+</body>
+</html>

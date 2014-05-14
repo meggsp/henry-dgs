@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<section id="main-content">
+  <div id="guts">
+    <div id="project">
+      <h2>Company Name: <%= @quote.company_name %> | Quote Status: <%= @quote.quote_status %></h2>
+    </div>
+    <div id="customer-demographics">
+      <h2>Quote Details</h2>
+      <div class="field">
+      <%= @quote.quote_information %>
+    </div>
+  </div>
+
+  <div id="job-desc">
+    <h2>Production Notes</h2>
+    <div class="field">
+      <%= @quote.production_notes %>
+    </div>
+  </div>
+
+  <div id="dates"><h2>Customer Details</h2>
+    Quote Amount: $<%= @quote.quote_amount%>
+    <br>Order Ship Date: <%= @quote.order_ship_date %>
+    <br>Quote Due Date: <%= @quote.quote_due_date %>
+    <br>Artwork Due Date: <%= @quote.artwork_due_date %>
+    <br>Artwork Proof Link: <%= link_to 'Link To Artwork Proof', @quote.artwork_proof_link %>
+    <br>Order Installation Date: <%= @quote.order_installation_date %>
+    <br>Quote Link: <%= link_to 'Link To Quote', @quote.quote_link %>
+    <br>Updated At: <%= @quote.updated_at %>
+  </div>
+  </span>
+  </div>
+  <div style="clear:both;"></div>
+  <div class="actions">
+    <%= link_to 'Edit', edit_quote_path(@quote) %> |
+    <%= link_to 'Back', quotes_path %>
+  </div>
+  </div>
+
+  </div>
+
+  </div>
+
+</section>
+
+
